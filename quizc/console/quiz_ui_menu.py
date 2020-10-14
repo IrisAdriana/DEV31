@@ -10,7 +10,7 @@ class QuestionUIMenu(object):
 
     def ask_question_title(self):
         print("Type the question title")
-        return input(self.MENU_PROMPT)
+        return input(self.MENU_PROMPT).upper()
 
     def ask_question_type(self):
         print("Select a question to add")
@@ -36,8 +36,8 @@ class QuestionUIMenu(object):
         additional_data = []
         while True:
             print("""Select an action:
-1. Add question option
-0. Exit""")
+                    1. Add question option
+                    0. Exit""")
             option = input(self.MENU_PROMPT)
             if option == "0":
                 if len(additional_data) == 0:
@@ -50,7 +50,6 @@ class QuestionUIMenu(object):
                 additional_data.append(value)
 
         return additional_data
-
 
     @staticmethod
     def handle_create_question() -> Question:
@@ -78,7 +77,7 @@ class QuizUIMenu(object):
 
     def ask_quiz_title(self):
         print("Type the quiz title")
-        return input(self.MENU_PROMPT)
+        return input(self.MENU_PROMPT).upper()
 
     def handle_create_quiz(self) -> Quiz:
         title = self.ask_quiz_title()

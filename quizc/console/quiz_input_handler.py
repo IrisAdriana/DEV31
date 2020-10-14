@@ -9,8 +9,8 @@ class QuestionInputHandler(object):
         if question.type.configuration.has_additional_data:
             answers = self.collect_answer_options(question)
         else:
-            print(question.type.name + ' value:')
-            answers = [input(self.MENU_PROMPT)]
+            print(question.type.name + ' answer_value:')
+            answers = [input(self.MENU_PROMPT).upper()]
         return answers
 
     def collect_answer_options(self, question):

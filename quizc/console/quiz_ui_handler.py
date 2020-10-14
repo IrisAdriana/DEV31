@@ -3,6 +3,12 @@ from quizc.console.quiz_ui_menu import QuizUIMenu
 from quizc.model.quiz import Quiz
 from quizc.model.quiz_answers import QuizAnswer, Answer
 
+"""First Quiz Menu 
+1. create
+2. fill
+3. show
+4. exit"""
+
 
 class QuizUIHandler(object):
 
@@ -28,6 +34,6 @@ class QuizUIHandler(object):
         print(quiz_answer.quiz.title)
         print("=============================================")
         for answer in quiz_answer.answers:
-            print(answer)
+            print("Question: " + answer.question.title + '\n'"Answer is: " + answer.answers[0])
 
         return quiz_answer
